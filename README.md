@@ -19,6 +19,9 @@
 
 </details>
 
+
+<br>
+
 ## Introduction
 
 In this exercise, you will practice working with React Hooks, specifically the `useEffect` hook. Your task will be to set up *effects* in different components that fetch data from an API, store the response data in the state, and render it in the components.
@@ -28,7 +31,7 @@ In this exercise, you will practice working with React Hooks, specifically the `
 <br>
 
 <p align="center">
-  <img src="" alt="Example - Finished LAB" />
+  <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-fake-store/Iteration+3.gif" alt="Example - Finished LAB" width="600" />
 </p>
 
 <br>
@@ -81,7 +84,7 @@ To help you get started quickly, we have provided you with the starter code and 
 
 You will be using the [Fake Store API](https://fakestoreapi.com/) to get the data that you will show in the app. This API provides endpoints that return mock/fake data for an online store, such as a list of products, product details, and a shopping cart, that you can use to build a simple e-commerce application. The API is publicly available and free.
 
-
+<br>
 
 You will use the following API endpoints in this exercise:
 
@@ -91,9 +94,8 @@ You will use the following API endpoints in this exercise:
 | `GET`       | **`https://fakestoreapi.com/products`**     | Returns a JSON response with a list of *all products*        |
 | `GET`       | **`https://fakestoreapi.com/products/:id`** | Returns a JSON response with the details of *a specific product* (by its `id`) |
 
+
 <br>
-
-
 
 
 ----
@@ -125,6 +127,9 @@ Once you have received the response with the list of products, save it in the co
 <details>
 
   <summary><b>Hint</b></summary>
+
+  <br>
+
 
 The HTTP request to the API should be done after the component loads (mounts). To do this, you need to set up a side effect using the `useEffect` hook (remember to import the `useEffect` hook from the React library before using it).
 
@@ -173,10 +178,17 @@ useEffect(() => {
 </details>
 
 
+<br>
+
+
+----
+
+
 ### Iteration 2 | Product List Links
 
 Each product in the list should be clickable and should navigate to the `ProductDetailsPage` component, where the details of the selected product should be displayed. To do this, you will need to use the React Router's [`Link`](https://reactrouter.com/en/main/components/link) element.
 
+<br>
 
 
 Each *link* should contain the product's `id` as a URL parameter. The link URL should have the following structure:
@@ -185,7 +197,7 @@ Each *link* should contain the product's `id` as a URL parameter. The link URL s
 /product/details/:productId
 ```
 
-
+<br>
 
 The `productId` should be replaced with the actual `id` of the selected product. For example, if the user clicks on the product with the `id` 5, the URL should be:
 
@@ -223,14 +235,14 @@ If you have correctly implemented the links in the previous step, when a user cl
 <br>
 
 <p align="center">
-  <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-fake-store/Iteration+2+product+id.png" alt="" width="750"/>
+  <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-fake-store/Iteration+2+product+id.png" alt="" width="700"/>
 </p>
 
 
 
 <br>
 
-
+<br>
 
 In the `ProductDetailsPage` component, make a HTTP request to the API endpoint **`GET`** **`https://fakestoreapi.com/products/:id`** to retrieve the details of the selected product. You can find the documentation for this endpoint and the example of the JSON response [here](https://fakestoreapi.com/docs).
 
@@ -256,6 +268,9 @@ Save the response with the product details in the component's state and render i
 
 
   <summary><b>Hint</b></summary>
+
+  <br>
+  
 
 Before you make an HTTP request to the Fake Store API, you need to get the `id` of the selected product from the URL. To access the URL parameters from the browser's URL bar, use the React Router hook `useParams`.
 
@@ -296,13 +311,15 @@ The next feature we want to implement in our app is the shopping cart.
 
 When the user clicks on the cart icon 🛒 in the top right corner, they should be navigated to the **Cart Page**. The URL displayed in the address bar should change to `/cart`.
 
+<br>
+
 The **Cart Page** should display the list of products in the cart. The Fake Store API provides an endpoint that returns a mock/fake shopping cart that you can use to simulate the shopping cart functionality. The endpoint is:
 
 ```http
 https://fakestoreapi.com/carts/:id
 ```
 
-
+<br>
 
 The `:id` in the URL should be replaced with the actual `id` of the cart. For example, you can make a request to `https://fakestoreapi.com/carts/5` to get the details of the cart with the id 5. You can find the documentation for this endpoint [here](https://fakestoreapi.com/docs).
 
@@ -315,6 +332,9 @@ The `:id` in the URL should be replaced with the actual `id` of the cart. For ex
 
   <summary><b>Hint</b></summary>
 
+  <br>
+
+
   The carts endpoint `https://fakestoreapi.com/carts/:id` returns a JSON with a list of products in the cart, but it does not return the details of the products. To get the details of each product, you will need to make a separate request to the products endpoint `https://fakestoreapi.com/products` and then show the details of the products in the cart.
 
   <br>
@@ -323,10 +343,13 @@ The `:id` in the URL should be replaced with the actual `id` of the cart. For ex
 
 <br>
 
+<br>
 
 <br>
 
 **Happy coding!** :blue_heart:
+
+<br>
 
 <br>
 
