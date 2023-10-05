@@ -102,9 +102,13 @@ You will use the following API endpoints in this exercise:
 
 ### Iteration 1 | Products List
 
-In the `HomePage` component, make an HTTP request to the Fake Store API endpoint **`GET`** **`https://fakestoreapi.com/products`** to retrieve the list of all products. You can find the documentation and response example for this API endpoint [here](https://fakestoreapi.com/docs).
+In the `HomePage` component, make an HTTP request to the Fake Store API endpoint **Get all products** to retrieve the list of all products. <br> The API endpoint you should make a request to is:
 
+**`GET`** **`https://fakestoreapi.com/products`** 
 
+You can find the documentation and response example for this API endpoint [here](https://fakestoreapi.com/docs).
+
+<br>
 
 Once you have received the response with the list of products, save it in the component's state and render the list of products on the page.
 
@@ -244,9 +248,23 @@ If you have correctly implemented the links in the previous step, when a user cl
 
 <br>
 
-In the `ProductDetailsPage` component, make a HTTP request to the API endpoint **`GET`** **`https://fakestoreapi.com/products/:id`** to retrieve the details of the selected product. You can find the documentation for this endpoint and the example of the JSON response [here](https://fakestoreapi.com/docs).
 
-Save the response with the product details in the component's state and render it on the page.
+
+In the `ProductDetailsPage` component, make a HTTP request to the API endpoint **Get a single product** to retrieve the details of the selected product. <br> The API endpoint you should make a request to is:
+
+<br>
+
+**`GET`** **`https://fakestoreapi.com/products/:id`**
+
+> *Replace the `:id` with the id of the product.*
+
+<br>
+
+You can find the documentation and response example for this API endpoint [here](https://fakestoreapi.com/docs).
+
+<br>
+
+Once you have received the response with the product details, save it in the component's state and render the list of products on the page.
 
 <br>
 
